@@ -1,5 +1,8 @@
+<div class="Navigation-search">
+    <input  id="search-input" type="text" placeholder="Search..." data-clear="true" value="">
+</div>
 <nav class="Navigation">
-{% for navPartial in frctl.theme.get('nav') %}
-    {% include 'partials/navigation/' + navPartial + '.nunj' %}
-{% endfor %}
+    {% for navPartial in frctl.theme.get('nav') %}
+        {% include 'partials/navigation/' + navPartial + '.nunj' %}
+    {% endfor %}
 </nav>
