@@ -505,9 +505,6 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 *::after {
   box-sizing: inherit; }
 
-::-moz-selection {
-  background-color: rgba(136, 68, 0, 0.075); }
-
 ::selection {
   background-color: rgba(136, 68, 0, 0.075); }
 
@@ -1435,7 +1432,6 @@ h6 {
   min-width: 280px;
   overflow: hidden; }
   .Frame.is-resizing {
-    cursor: -webkit-grabbing;
     cursor: grabbing; }
     .Frame.is-resizing .Frame-body,
     .Frame.is-resizing .Frame-panel {
@@ -1586,8 +1582,6 @@ h6 {
     border-right: 1px solid rgba(85, 17, 0, 0.25); }
   [dir="rtl"] .Header-button {
     border-left: 1px solid rgba(85, 17, 0, 0.25); }
-  .Header-button:focus, .Header-button:active {
-    outline: none; }
   .Header-button:hover {
     background-color: rgba(85, 17, 0, 0.05); }
   .Header-button:active {
@@ -1709,10 +1703,8 @@ h6 {
   overflow: hidden;
   background: white; }
   .Pen.is-resizing {
-    cursor: -webkit-grabbing;
     cursor: grabbing; }
     .Pen.is-resizing .Pen-handle {
-      cursor: -webkit-grabbing;
       cursor: grabbing; }
 
 .Pen-header {
@@ -1832,10 +1824,8 @@ h6 {
   .Preview.is-disabled .Preview-overlay {
     display: block; }
   .Preview.is-resizing {
-    cursor: -webkit-grabbing;
     cursor: grabbing; }
     .Preview.is-resizing * {
-      cursor: -webkit-grabbing !important;
       cursor: grabbing !important; }
   @media (min-width: 31.25em) {
     .Preview {
