@@ -1,14 +1,14 @@
 {
-  "name": "@frctl/mandelbrot",
+  "name": "@nqthqn/mandelbrot",
   "version": "1.2.3",
   "description": "The default theme for Fractal.",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/frctl/mandelbrot.git"
+    "url": "https://github.com/nqthqn/mandelbrot.git"
   },
   "bugs": {
-    "url": "https://github.com/frctl/mandelbrot/issues"
+    "url": "https://github.com/nqthqn/mandelbrot/issues"
   },
   "author": "Mark Perkins <mark@clearleft.com> (http://clearleft.com/)",
   "license": "MIT",
