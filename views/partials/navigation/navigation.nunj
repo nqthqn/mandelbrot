@@ -1,54 +1,8 @@
-<div id="searchid">
-    <div class="navigation-search">
-        <div class="form-search form-search--big" style="
-        padding: 16px;
-        width: 100%;
-        ">
-            <input  id="search-input" type="text" class="form-search__input" placeholder="Search..." data-clear="true" value="" style="
-            width: 100%;
-            border-radius: 3px;
-            border: 1px solid #ececec;
-            padding: 8px;
-            ">
-        </div>
-    </div>
-    <nav class="Navigation">
-        {% for navPartial in frctl.theme.get('nav') %}
-            {% include 'partials/navigation/' + navPartial + '.nunj' %}
-        {% endfor %}
-    </nav>
+<div class="Navigation-search">
+    <input  id="search-input" type="text" placeholder="Search..." data-clear="true" value="">
 </div>
-
-<script>
-jQuery('#search-input').on('keyup blur change', function () {
-  
-  search(
-    jQuery('#searchid ul')[0], 
-    this.value.toUpperCase()
-  );
-
-});
-
-function search(list, key) {
-  var i, li = jQuery(list).children('li');
-  var match = false;
-  for (i = 0; i < li.length; i++) {
-    var $li = jQuery(li[i]);
-    var childTree = jQuery(li[i]).children('ul');
-
-    if ($li.parents('.Tree-collection').find('> .Tree-collectionLabel').text().toUpperCase().indexOf(key) !== -1 || 
-        $li.text().toUpperCase().indexOf(key) !== -1 || 
-        $li.find('[data-tags]').attr('data-tags').toUpperCase().indexOf(key) !== -1
-    ) {
-      match = true;
-      $li.parents('.Tree-collection').removeClass('is-closed');
-      $li.show();
-      search(childTree, key);
-    } else {
-      match = false;
-      $li.hide();
-    }
-  }
-  return match;
-}
-</script>
+<nav class="Navigation">
+    {% for navPartial in frctl.theme.get('nav') %}
+        {% include 'partials/navigation/' + navPartial + '.nunj' %}
+    {% endfor %}
+</nav>
